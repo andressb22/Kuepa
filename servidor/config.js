@@ -1,12 +1,15 @@
-const config = {
-    db: {
-        user: 'postgres',
-        password: '1015412015Af',
-        host: 'localhost',
-        port: '5432',
-        database: 'kuepadb'
-    },
-    jsonKey:'keyDePrueba'
-}
+const {config} = require('dotenv')
+config()
 
-module.exports = config
+ 
+
+module.exports = {
+    db: {
+        user: process.env.user ,
+        password:process.env.password ,
+        host:process.env.host ,
+        port:process.env.port ,
+        database:process.env.database 
+    },
+    jsonKey:process.env.jsonKey
+}
